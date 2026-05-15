@@ -1,7 +1,0 @@
-cl/pymetrack/msgateway/filter/AuthenticationFilter.class
-cl/pymetrack/msgateway/controller/GatewayController.class
-cl/pymetrack/msgateway/MsGatewayApplication.class
-cl/pymetrack/msgateway/controller/FallbackController.class
-cl/pymetrack/msgateway/config/RouteConfig.class
-cl/pymetrack/msgateway/filter/LoggingFilter.class
-cl/pymetrack/msgateway/config/GatewayConfig.class
