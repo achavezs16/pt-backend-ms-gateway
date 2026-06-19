@@ -317,3 +317,27 @@ for service in 8080 8081 8082 8084; do
   curl -s http://localhost:$service/actuator/health || echo "Servicio en puerto $service no disponible"
 done
 ```
+
+## 🧪 Pruebas y Cobertura (Quality Gate)
+
+El proyecto cuenta con una rigurosa suite de pruebas unitarias enfocada en garantizar la seguridad y fiabilidad del enrutamiento reactivo, superando el **Quality Gate del 60%** exigido por los estándares de calidad.
+
+### Herramientas Utilizadas
+- **JUnit 5 & Mockito:** Para la creación de mocks y aserciones.
+- **Reactor Test (`StepVerifier`):** Para la evaluación estricta de flujos asíncronos y reactivos (`Mono`, `Flux`).
+- **MockServerWebExchange:** Para la simulación de peticiones HTTP nativas de WebFlux.
+- **JaCoCo:** Para la medición y validación de cobertura de código.
+
+### Cobertura Alcanzada
+- **Cobertura Total del Proyecto:** **97%** 🏆
+- **Cobertura en Filtros (`cl.pymetrack.msgateway.filter`):** **100%**
+  - `AuthenticationFilter`: Validación estricta de tokens JWT, manejo de rutas públicas e inyección de headers de contexto (`X-User-Email`, `X-User-Role`).
+  - `LoggingFilter`: Registro de tiempos de respuesta, trazabilidad (`X-Request-Id`) y manejo de errores reactivos.
+
+### Ejecución de Pruebas
+Para ejecutar las pruebas y generar el reporte HTML de JaCoCo:
+```bash
+mvn clean test jacoco:report
+```
+
+- **El reporte interactivo se generará en la ruta:** target/site/jacoco/index.html
