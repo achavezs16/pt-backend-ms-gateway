@@ -38,22 +38,22 @@ spring:
 
       routes:
         - id: ms-user
-          uri: http://localhost:8085
+          uri: http://ms-user:8085
           predicates:
             - Path=/api/v1/auth/**,/api/v1/users/**,/api/v1/pymes/**,/api/v1/admin/**
 
         - id: ms-productos
-          uri: http://localhost:8081
+          uri: http://ms-productos:8081
           predicates:
             - Path=/api/v1/productos/**,/api/v1/categorias/**,/api/v1/inventario/**
 
         - id: ms-pedidos
-          uri: http://localhost:8082
+          uri: http://ms-pedidos:8082
           predicates:
             - Path=/api/v1/pedidos/**
 
         - id: ms-bff
-          uri: http://localhost:8084
+          uri: http://ms-bff:8084
           predicates:
             - Path=/api/v1/bff/**
 
