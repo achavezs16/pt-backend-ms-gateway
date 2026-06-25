@@ -11,13 +11,8 @@ spring:
         add-to-simple-url-handler-mapping: true
         cors-configurations:
           '[/**]':
-            allowedOrigins:
-              - "http://localhost:3000"
-              - "http://127.0.0.1:3000"
-              - "http://localhost:3001"
-              - "http://127.0.0.1:3001"
-              - "http://localhost:3002"
-              - "http://127.0.0.1:3002"
+            allowedOriginPatterns:
+              - "http://*"
             allowedMethods:
               - GET
               - POST
@@ -43,17 +38,17 @@ spring:
             - Path=/api/v1/auth/**,/api/v1/admin/**,/api/v1/dashboard/**,/api/v1/users/**,/api/v1/pymes/**
 
         - id: ms-productos
-          uri: http://172.31.93.143:8081
+          uri: http://172.31.74.61:8081
           predicates:
             - Path=/api/v1/productos/**,/api/v1/categorias/**,/api/v1/inventario/**
 
         - id: ms-pedidos
-          uri: http://172.31.76.154:8082
+          uri: http://172.31.89.3:8082
           predicates:
             - Path=/api/v1/pedidos/**
 
         - id: ms-bff
-          uri: http://172.31.12.217:8084
+          uri: http://172.31.16.165:8084
           predicates:
             - Path=/api/v1/bff/**
 
