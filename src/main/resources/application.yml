@@ -33,22 +33,22 @@ spring:
 
       routes:
         - id: ms-user
-          uri: http://172.31.28.5:8085
+          uri: http://172.31.36.130:8085
           predicates:
             - Path=/api/v1/auth/**,/api/v1/admin/**,/api/v1/dashboard/**,/api/v1/users/**,/api/v1/pymes/**
 
         - id: ms-productos
-          uri: http://172.31.79.177:8081
+          uri: http://172.31.13.78:8081
           predicates:
             - Path=/api/v1/productos/**,/api/v1/categorias/**,/api/v1/inventario/**
 
         - id: ms-pedidos
-          uri: http://172.31.80.225:8082
+          uri: http://172.31.60.165:8082
           predicates:
             - Path=/api/v1/pedidos/**
 
         - id: ms-bff
-          uri: http://172.31.40.80:8084
+          uri: http://172.31.13.169:8084
           predicates:
             - Path=/api/v1/bff/**
 
